@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".GameComputerActivity">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Lawan Komputer!"
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/kertas2"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_kertas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/batu2" />
+
+        <ImageView
+            android:id="@+id/kertas1"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_kertas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/batu1" />
+
+        <TextView
+            android:id="@+id/tvPemainMenang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Klik pilihan anda!"
+            android:textColor="#E91E63"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+        <TextView
+            android:id="@+id/tvKeteranganPlayerSatu"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Pemain1/ Anda "
+            app:layout_constraintBottom_toTopOf="@id/batu1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPemainMenang">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvKeteranganPlayerDua"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="KOMPUTER/ pemain 2"
+            app:layout_constraintBottom_toTopOf="@id/batu2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPemainMenang">
+
+        </TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <ImageView
+            android:id="@+id/gunting1"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_gunting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kertas1" />
+
+        <ImageView
+            android:id="@+id/batu2"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_batu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideLine" />
+
+        <ImageView
+            android:id="@+id/batu1"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_batu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideLine" />
+
+        <ImageView
+            android:id="@+id/gunting2"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_gunting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kertas2" />
+
+        <ImageView
+            android:id="@+id/imageClose"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/close" />
+
+        <ImageView
+            android:id="@+id/imageRepeat"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gunting2"
+            app:srcCompat="@drawable/refresh" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
