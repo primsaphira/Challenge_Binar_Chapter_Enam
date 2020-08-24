@@ -1,4 +1,4 @@
-package com.binar.myproject.codechallengebinar_chapter5
+package com.prima.challengebinarchapterenam
 
 class GameService {
     var gameSuit = arrayOf("Batu", "Gunting", "Kertas")

@@ -1,4 +1,4 @@
-package com.binar.myproject.codechallengebinar_chapter5
+package com.prima.challengebinarchapterenam
 
 enum class Result (val resultValue: String) {
     PEMAIN_1_MENANG("Pemain 1 Menang!"),

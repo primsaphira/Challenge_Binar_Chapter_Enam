@@ -2,7 +2,6 @@ package com.prima.challengebinarchapterenam
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.binar.myproject.codechallengebinar_chapter5.GameService
 import kotlinx.android.synthetic.main.activity_game_player.*
 
 class GamePlayerActivity : AppCompatActivity() {

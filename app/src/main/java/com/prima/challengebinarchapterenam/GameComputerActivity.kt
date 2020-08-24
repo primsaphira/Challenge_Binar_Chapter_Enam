@@ -2,7 +2,6 @@ package com.prima.challengebinarchapterenam
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.binar.myproject.codechallengebinar_chapter5.GameService
 import kotlinx.android.synthetic.main.activity_game_computer.*
 
 class GameComputerActivity : AppCompatActivity() {
@@ -93,7 +92,7 @@ class GameComputerActivity : AppCompatActivity() {
 
     fun runGame() {
         if (pilihanPemain1 != "" && pilihanPemain2 != "") {
-            val hasil = gameService.calculateWinner(indexPemain1, indexPemain2).resultValue
+            val hasil = gameService.calculateWinner(indexPemain1, listrandom).resultValue
             tvPemainMenang.text = hasil
         } else {
             tvPemainMenang.text = "Klik kedua pilihan anda pada gambar"
