@@ -15,9 +15,13 @@ class LoginActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("MySF", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.putString("username","binarian")
-        editor.putString("password","binar123")
-        editor.apply()
+        val contains = sharedPreferences.contains("username")
+        if(!contains) {
+            editor.putString("username","binarian")
+            editor.putString("password","binar123")
+            editor.putString("email", "binarian@binar.co.id")
+            editor.apply()
+        }
 
         btnLogin.setOnClickListener {
             val sharedPreferences = getSharedPreferences("MySF", Context.MODE_PRIVATE)

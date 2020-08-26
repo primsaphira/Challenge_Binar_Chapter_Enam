@@ -1,4 +1,4 @@
-package com.prima.challengebinarchapterenam
+package com.prima.challengebinarchapterenam.room
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
