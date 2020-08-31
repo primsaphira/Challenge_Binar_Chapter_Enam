@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.prima.challengebinarchapterenam.ProfilActivity
 import com.prima.challengebinarchapterenam.R
 import com.prima.challengebinarchapterenam.room.Memo
 import kotlinx.android.synthetic.main.item_memo.view.*
@@ -28,6 +29,7 @@ class MemoAdapter (val listMemo : List<Memo>) : RecyclerView.Adapter<MemoAdapter
         holder.itemView.tvIsiMemo.setText(listMemo[position].isimemo)
 
         holder.itemView.setOnClickListener {
+            (holder.itemView.context as ProfilActivity).showEditDialog(listMemo[position])
 
         }
     }

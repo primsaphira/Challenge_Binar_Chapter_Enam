@@ -15,14 +15,16 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        val username = "guntingbatukertas123"
-        val password = "abcabc123"
         val sharedPreferences = getSharedPreferences("MySF", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString("username", username)
-        editor.putString("password", password)
 
-        editor.apply()
+        val contains = sharedPreferences.contains("username")
+        if(!contains) {
+            val editor = sharedPreferences.edit()
+            editor.putString("username","binarian")
+            editor.putString("password","binar123")
+            editor.putString("email", "binarian@binar.co.id")
+            editor.apply()
+        }
 
 
         Glide.with(this)

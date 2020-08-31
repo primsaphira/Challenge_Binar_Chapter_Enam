@@ -48,17 +48,17 @@
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/ivProfile" />
 
         <TextView
             android:id="@+id/tvUserMultiplayer"
-            android:layout_width="180dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:gravity="center"
             android:text=" bermain melawan Player"
-            app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivPlayMultiplayer">
 
         </TextView>
@@ -85,34 +85,6 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/tvNamaUser"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:gravity="center"
-            android:text=" "
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivPlayMultiplayer">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/tvNama"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:gravity="center"
-            android:text=" "
-            android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@id/tvUserComputer"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivPlayComputer">
-
-        </TextView>
-
-        <TextView
             android:id="@+id/tvUserComputer"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
@@ -120,6 +92,7 @@
             android:gravity="center"
             android:text=" bermain melawan Computer"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivPlayComputer" />
 
 

@@ -26,5 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:text="RESET"
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>
