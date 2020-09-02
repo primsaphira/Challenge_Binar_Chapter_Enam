@@ -1,4 +1,4 @@
-/*package com.prima.challengebinarchapterenam
+package com.prima.challengebinarchapterenam/*package com.prima.challengebinarchapterenam
 
 import android.view.LayoutInflater
 import android.view.View
