@@ -1,5 +1,6 @@
 package com.prima.challengebinarchapterenam
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,11 +17,15 @@ class MenuActivity : AppCompatActivity() {
 
         //set ke textView di xml layout MenuActivity
 
-        tvNamaUser.text = namaUserDariIntent
-        tvNama.text = namaUserDariIntent
+        val sharedPreferences = getSharedPreferences("MySF", Context.MODE_PRIVATE)
+        val usernamePlayer = sharedPreferences.getString("username", "No username")
+
+        tvUserMultiplayer.text = "$usernamePlayer vs Player"
+        tvUserComputer.text = "$usernamePlayer vs Computer"
 
         ivProfile.setOnClickListener {
-
+            val intent = Intent(this, ProfilActivity::class.java)
+            startActivity(intent)
         }
 
         ivPlayMultiplayer.setOnClickListener {

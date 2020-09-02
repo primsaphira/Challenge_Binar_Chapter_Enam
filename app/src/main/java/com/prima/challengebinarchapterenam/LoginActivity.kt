@@ -14,13 +14,16 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val sharedPreferences = getSharedPreferences("MySF", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        val contains = sharedPreferences.contains("username")
-        if(!contains) {
+
+
+        btnReset.setOnClickListener {
+            val editor = sharedPreferences.edit()
             editor.putString("username","binarian")
             editor.putString("password","binar123")
             editor.putString("email", "binarian@binar.co.id")
             editor.apply()
+
+            Toast.makeText(this, "Username direset", Toast.LENGTH_LONG).show()
         }
 
         btnLogin.setOnClickListener {
@@ -28,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
             val usernamePlayer = sharedPreferences.getString("username", "No username")
             val passwordPlayer = sharedPreferences.getString("password", "No password")
 
-            if (etUsername.text.toString() == usernamePlayer && etPassword.text.toString() == passwordPlayer) {
+            if (etUsername.text.toString() == sharedPreferences.getString("username", "No username") && etPassword.text.toString() == sharedPreferences.getString("password", "No password")) {
 
                 val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
